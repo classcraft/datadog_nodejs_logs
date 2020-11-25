@@ -13,7 +13,7 @@ echo "Datadog agent started"
 
 exec nodejs /app/main.js 2>&1 | tee >(multilog s1000000 n10 /app/logs) &
 
-sleep 6
+sleep 30
 
 cat /app/logs/current
 ls /var/log/datadog
